@@ -1,0 +1,53 @@
+{
+  "name": "playwright-typescript-bdd-framework",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript BDD Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js && node generateReport.js",
+    "parallel": "cucumber-js --parallel 4",
+    "test:qa":"set ENV=qa&& cucumber-js && node generateReport.js",
+    "test:uat":"set ENV=uat&& cucumber-js && node generateReport.js",
+    "test:prod":"set ENV=prod&& cucumber-js && node generateReport.js",
+    "smoke":"cucumber-js --tags \"@smoke\" && node generateReport.js",
+    "regression":"cucumber-js --tags \"@regression\" && node generateReport.js",
+    "checkout": "cucumber-js --tags \"@checkout\"",
+    "login": "cucumber-js --tags \"@login\"",
+    "cart": "cucumber-js --tags \"@cart\"",
+    "logout": "cucumber-js --tags \"@logout\"", 
+    "test:login": "cucumber-js features/login.feature",
+    "test:headed": "cucumber-js",
+    "playwright": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suryavenkatasainikhita/playwright-typescript-bdd-framework.git"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "bdd",
+    "cucumber",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/suryavenkatasainikhita/playwright-typescript-bdd-framework/issues"
+  },
+  "homepage": "https://github.com/suryavenkatasainikhita/playwright-typescript-bdd-framework#readme",
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.3.0",
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "multiple-cucumber-html-reporter": "^3.8.0",
+    "playwright": "^1.65.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+    },
+    "dependencies": {
+    "winston": "^3.19.0"
+  }
+}
+
